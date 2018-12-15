@@ -153,7 +153,7 @@ function draw() {
 }
 
 // default color of playground is green.
-var playGroundColor = "green";
+var playGroundColor="green";
 
 document.getElementById("greenPlayGround").addEventListener("click",function(){
     playGroundColor = "green";
