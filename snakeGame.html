@@ -25,6 +25,37 @@
             float:left;
             padding: 10px;
         }
+        #greenPlayGround,#speed200{
+           background-color: green;
+           
+        }
+        #pinkPlayGround{
+            background-color: pink;
+        }
+        #whitePlayGround{
+            background-color: white;
+        }
+        #speed100{
+            background-color: yellow;
+        }
+        #speed80{
+            background-color: red;
+        }
+
+        button{
+            font-weight:800;
+            text-align: center;
+            border: 1px solid transparent;
+            padding: 6px 12px;
+            line-height: 1.42857143;
+            border-radius: 4px;
+        }
+        #pause,#restart{
+            font-family: monospace;
+            font-size: 20px;
+            background-color:rgb(9, 58, 58);
+            color: yellow;
+        }
     </style>
 </head>
 <body id="playground">
@@ -38,14 +69,16 @@
     <button id="whitePlayGround">White</button>
 
     <h3>Choose your snake speed.</h3>
-    <button id="speed80">80</button>
-    <button id="speed100">100</button>
-    <button id="speed200">200</button>
+    <button id="speed80">Fast</button>
+    <button id="speed100">Medium</button>
+    <button id="speed200">Slow</button>
 
     <h3>After selecting snake speed, Press any arrow key to start</h3>
-    <h2>Press "P" key to Pause/Play.</h2>
     <br><br>
+    <button id="pause">Pause/Play</button>
     <button id=restart>Restart</button>
+    <br>
+    <h3>You can also press "P" key to Pause/Play.</h3>
     <script src="scripts.js"></script>
     
 

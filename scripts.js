@@ -78,11 +78,6 @@ function draw() {
     ctx.fillStyle = playGroundColor;
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    //the food point
-    ctx.fillStyle= "blue";
-    ctx.fillRect(food.x,food.y,30,30);
-    ctx.stroke();
-
     //snake head remain red. body will be yellow.
     //snake body co-ordinates
     for (let i = 0; i < snake.length; i++) {
@@ -92,6 +87,13 @@ function draw() {
         ctx.strokeStyle = "red";
         ctx.strokeRect(snake[i].x, snake[i].y, step, step);
     }
+
+    //the food point
+    ctx.fillStyle= "blue";
+    ctx.fillRect(food.x,food.y,30,30);
+    ctx.stroke();
+
+    
 
     //if "P" is pressed then it will do nothing means. the game will be paused.
     if(pause){
@@ -140,7 +142,7 @@ function draw() {
         ctx.font = "45px solid";
         ctx.fillText("Game Over",canvas.width/3,canvas.height/3);
         ctx.font = "30px solid";
-        ctx.fillText("Refresh the window to play again.",canvas.width/6,canvas.height/2);
+        ctx.fillText("Click on Restart and play again.",canvas.width/6,canvas.height/2);
         // window.location.replace(window.location.href);
     }
 
@@ -191,6 +193,12 @@ document.getElementById("speed200").addEventListener("click",function(){
     game = setInterval(draw,snakeSpeed);
 });
 
+//pause button
+document.getElementById("pause").addEventListener("click",function(){
+    pausefunction();
+});
+
+//refresh the window.
 document.getElementById("restart").addEventListener("click",function(){
     location.reload();
-})
+});
