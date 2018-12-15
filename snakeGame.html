@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake Game</title>
+    <style>
+        canvas{
+            border: 5px solid rgb(235, 200, 85);
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .functions{
+            float: right;
+            padding: 10px;
+        }
+
+        .playground{
+            float:left;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body id="playground">
+    <div class="playground"><canvas id="canvas" width="608" height="608"></canvas></div>
+
+    <div class="functions">
+    <h2>Score : <span id="score"></span></h2>
+    <h3>Choose your playground color</h3>
+    <button id="greenPlayGround">Green</button>
+    <button id="pinkPlayGround">Pink</button>
+    <button id="whitePlayGround">White</button>
+
+    <h3>Choose your snake speed.</h3>
+    <button id="speed80">80</button>
+    <button id="speed100">100</button>
+    <button id="speed200">200</button>
+    <br><br>
+    <button id=restart>Restart</button>
+    <script src="scripts.js"></script>
+    
+
+
+</body>
+</html>
